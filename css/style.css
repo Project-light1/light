@@ -941,6 +941,7 @@ a:focus {
 
 
 .m-div {
+  margin-top: 50px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -962,5 +963,25 @@ a:focus {
 .m-div h1 {
   color: white;
   font-size: 3.5rem;
+}
+.kok{
+background-color: #f7ebe6;
+opacity: 0.8;
+background-image: radial-gradient(#e69a28 0.5px, #f7ebe6 0.5px);
+background-size: 10px 10px;
+}
+
+@keyframes good {
+   0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Apply the animation to the image */
+.animated11 {
+  animation-name: good;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 /*# sourceMappingURL=style.css.map */
