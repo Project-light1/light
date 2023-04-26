@@ -40,6 +40,175 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+   footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #2c3e50;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #34495e;
+    display: inline-block;
+    padding-bottom: 3px;
+    animation: slideInLeft 1s;
+  }
+
+  .footer-section p, ul, li, form {
+    animation: slideInUp 1s;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+  }
+
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+  }
+
+  .social-icons img:hover {
+    animation: bounce 0.5s;
+  }
+
+  .copy-right {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #3498db;
+  }
+
+  input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-section {
+      width: auto;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    .social-icons, .copy-right {
+      width: auto;
+    }
+
+    .copy-right {
+      margin: 20px 0 0 0;
+      text-align: center;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+@keyframes slideInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .card {
+    background-color: #34495e;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h3 {
+    margin-top: 0;
+  }
+
+</style>
+
 </head>
 
 <body style="font-family: 'Nova Flat'; ">
@@ -67,20 +236,21 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">INTRODUCTION  <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">Arbiverse Token</a>
+                  <a class="nav-link" href="#token">Arbiverse Token</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html"> About us</a>
+                  <a class="nav-link" href="#about"> About us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contactLink">Services</a>
+                  <a class="nav-link" href="#service">Services</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contactLink">Arbiversity</a>
-                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="">Arbiversity</a>
+                  <h6>comming soon</h6>
+                </li> -->
               </ul>
             </div>
            
@@ -98,13 +268,15 @@
               <div class="row">
                <div class="col-md-6 m-div">
                   <div class="detail_box">
-                    <h1 style="                                           font-family: 'Games', sans-serif; letter-spacing: 5px; font-size: 24;" >
+                    <h1 style=" font-family: 'Games', sans-serif; letter-spacing: 5px; font-size: 2; margin-top: 10px;" >
                          Introducing ArbiVerse
                     </h1>
-                    <p>
-                      Welcome to ArbiVerse, the revolutionary new project built on the Arbitrum ecosystem that brings together the power of NFTs and tokens to create a diverse and engaging crypto ecosystem all on a single mobile application. <p> With ArbiVerse mobile application, you can access exciting new ways to engage with the world of cryptocurrency, from transactions and incentives to accessing exclusive features.</p> <p> Our token, ARBV, is a versatile cryptocurrency that offers a sense of scarcity, potentially increasing demand and value. Join us on this journey as we explore the exciting world of ArbiVerse.</p>
+                    <div>
+                      <p style="font-size:24px;">
+                      Welcome to ArbiVerse, the revolutionary new project built on the Arbitrum ecosystem that brings together the power of NFTs and tokens to create a diverse and engaging crypto ecosystem all on a single mobile application.<p style="font-size:24px;"> With ArbiVerse mobile application, you can access new and exciting ways to engage with the world of cryptocurrency and digital arts, from seamless transactions and incentives to accessing exclusive features.</p>
                     </p>
-                    <h1>JOIN US</h1>
+                    </div>
+                                        
                     <div class="btn-box">
                       <a href="" class="btn-1">
                         Get Early Access
@@ -127,14 +299,14 @@
             <div class="container">
               <div class="row">
                <div class="col-md-6 m-div">
-                  <div class="detail_box">
-                    <h1 style="                                           font-family: 'Games', sans-serif; letter-spacing: 5px; font-size:50px;">
+                  <div class="detail_box" style="margin-bottom:10px;">
+                   <h1 style=" font-family: 'Games', sans-serif; letter-spacing: 5px; font-size: 2; margin-top: 10px;" >
                          Introducing ArbiVerse
                     </h1>
-                    <p>
-                      Welcome to ArbiVerse, the revolutionary new project built on the Arbitrum ecosystem that brings together the power of NFTs and tokens to create a diverse and engaging crypto ecosystem all on a single mobile application. <p> With ArbiVerse mobile application, you can access exciting new ways to engage with the world of cryptocurrency, from transactions and incentives to accessing exclusive features.</p> <p> Our token, ARBV, is a versatile cryptocurrency that offers a sense of scarcity, potentially increasing demand and value. Join us on this journey as we explore the exciting world of ArbiVerse.</p>
+                    <p style="font-size:24px;">
+                      Welcome to the world of ArbiVerse - where the possibilities of NFTs on Arbitrum are endless! Join us on an exciting journey through a unique universe of NFTs, where you can manage, trade, and interact with your collections like never before. With ArbiVerse, you can experience the full potential of NFTs on the Arbitrum network, with cutting-edge features and tools designed to simplify your NFT experience.</p>
                     </p>
-                    <h1>JOIN US</h1>
+                    
                     <div class="btn-box">
                        <a href="" class="btn-1">
                         Get Early Access
@@ -144,11 +316,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                  <img src="images/img8.png" alt="">   
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -170,7 +338,7 @@
   </div>
 
   <!-- about section -->
-
+<div id="about"></div>
   <section class="about_section " style="background-color:#c2c1a9;">
     <div class="container">
       <div class="row">
@@ -191,7 +359,7 @@
 
 
             </p>
-            <a href="about.html">
+            <a href="https://arbiverse.gitbook.io/white-paper/">
               Read More
             </a>
           </div>
@@ -202,7 +370,7 @@
 
   <!-- end about section -->
 
-
+<div id="service"></div>
   <!-- service section -->
   <section class="service_section layout_padding">
     <div class="video-container">
@@ -210,7 +378,7 @@
     <source src="/images/gold.mp4" type="video/mp4">
   </video>
 </div>
-    <div class="container m-div" style="margin-right:20px;">
+    <div class="container m-div">
       <div class="heading_container">
         <h2>
           Our Services
@@ -298,7 +466,7 @@
   <!-- end service section -->
 
   <!-- work section -->
-
+<div id="token"></div>
   <section class="work_section layout_padding"  style="background-color:#c2c1a9;">
     <div class="container">
       <div class="heading_container">
@@ -371,130 +539,7 @@
 
   <!-- team section -->
 
-  <section class="team_section layout_padding2-bottom" style="color: #fff;">
-    <div class="container">
-      <div class="heading_container m-div">
-        <h2>
-        OUR TEAM
-        </h2>
-        <p>
-          We have a team of creative thinkers, passionate tech enthusiasts, dedicated professionals who deliver excellently in thier different fieds.
-        </p>
-      </div>
-    </div>
-    <div class="container m-div">
-      <div class="box b-1">
-        <div class="img-box">
-          <img src="images/t-1.png" alt="">
-        </div>
-        <div class="detail-box">
-          <h5>
-            Eternity
-          </h5>
-          <p>
-            Our Lead 
-          </p>
-          <div class="social_box">
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="team_container">
-      <div class="box b-1">
-        <div class="img-box">
-          <img src="images/t-1.png" alt="">
-        </div>
-        <div class="detail-box">
-          <h5>
-            Koksi
-          </h5>
-          <p>
-      The individual responsible for the creation, maintenance, and enhancement of the website. This person is the driving force behind the technical aspects of the website, from the initial design and development to the ungoing maintenance
-
-          <div class="social_box">
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="box b-2">
-        <div class="img-box">
-          <img src="images/t-2.png" alt="">
-        </div>
-        <div class="detail-box">
-          <h5>
-            0xMike
-          </h5>
-          <p>
-           In charge of all our technical builds.
-          </p>
-          <div class="social_box">
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="box b-3">
-        <div class="img-box">
-          <img src="images/t-3.png" alt="">
-        </div>
-        <div class="detail-box">
-          <h5>
-            0xvedapath
-          </h5>
-          <p>
-           A creative Digital Artist,NFT creator, Web3 contributor, graphic designer, and blockchain enthusiast with 4 years of experience, He has worked with top companies in the industry
-          </p>
-          <div class="social_box">
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- end team section -->
 
@@ -512,76 +557,7 @@
         </p>
       </div>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/client.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Normal distribution
-                </h6>
-                <p>
-                  NFT Tracking/Watching: The ArbiVerse Mobile Application provides an easy and convenient way to track and watch your NFTs across different marketplaces. You can easily view your collections, monitor their performance, and track any changes in their value over time.
-
-                </p>
-                <img src="images/quote.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/client.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Normal distribution
-                </h6>
-                <p>
-                  Alerts: Stay on top of your NFTs with our real-time alerts feature. You'll receive notifications when your NFTs are sold, when someone bids on them, or when you have a new watcher. This ensures that you never miss an opportunity to engage with potential buyers or follow up on sales.
-
-                </p>
-                <img src="images/quote.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/client.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Normal distribution
-                </h6>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when
-                  looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                  distribution of
-                  letters, as opposed to using 'Content here, content here', making it look
-                </p>
-                <img src="images/quote.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel_btn-container">
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+    
     </div>
 
   </section>
@@ -591,7 +567,7 @@
   <div class="footer_bg">
 
     <!-- contact section -->
-    <section class="contact_section layout_padding" id="contactLink">
+    <section class="contact_section layout_padding" id="contactLink" style="background-color: #c2c1a9;">
       <div class="container">
         <div class="heading_container">
           <h2>
@@ -602,26 +578,27 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <form>
+            <form action="https://getform.io/f/b34e4807-327c-4b07-a228-e07c7dcbfc61"
+                  method="POST" target="_blank">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputName4" placeholder="Twitter handle">
+                  <input type="text" class="form-control" id="inputName4" placeholder="Twitter handle"  name="twitter">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id"  name="email">
                 </div>
 
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Telegram">
+                  <input type="text" class="form-control" id="inputSubject4" placeholder="Telegram"  name="Telegram">
                 </div>
                 <div class="form-group col">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Arbitrum Eth Address">
+                  <input type="text" class="form-control" id="inputSubject4" placeholder="Arbitrum Eth Address"  name="EthAddress">
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="inputMessage" placeholder="Message for us">
+                <input type="text" class="form-control" id="inputMessage" placeholder="Message for us"  name="Message">
               </div>
               <div class="d-flex justify-content-center">
                 <button type="submit" class="">Submit</button>
@@ -634,69 +611,38 @@
 
 
     <!-- end contact section -->
+<footer>
+  <div class="footer-section card">
+    <h3>About</h3>
+    <p>The best Nft tracking app on Arbitrum</p>
+  </div>
+  <div class="footer-section card">
+    <h3>Contact</h3>
+    <p>Email: info@yourcompany.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+  </div>
+  <div class="footer-section card">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="/terms"></a></li>
+      <li><a href="https://arbiverse.gitbook.io/white-paper/"></a>white-paper</li>
+      
+    </ul>
+  </div>
+  <div class="footer-section card">
+    <h3>Newsletter</h3>
+    <p>Subscribe to our newsletter for the latest updates and offers:</p>
+    <form action="https://getform.io/f/b34e4807-327c-4b07-a228-e07c7dcbfc61" method="POST">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <button type="submit" target="blan">Subscribe</button>
+    </form>
+  </div>
+  <!-- Add your existing social-icons and copy-right sections here -->
+  <!-- ... -->
+</footer>
 
 
-
-    <!-- info section -->
-    <section class="info_section layout_padding2">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="info_logo">
-              <h3>
-                
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor indidunt ut labore et
-                dolore magna
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="info_links">
-              <h4>
-                BASIC LINKS
-              </h4>
-              <ul class="  ">
-                <li class=" active">
-                  <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="">
-                  <a class="" href="about.html"> About</a>
-                </li>
-                <li class="">
-                  <a class="" href="service.html"> Services </a>
-                </li>
-                <li class="">
-                  <a class="" href="#contactLink">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="info_contact">
-              <h4>
-                CONTACT DETAILS
-              </h4>
-              <a href="">
-                <div class="img-box">
-                  <img src="images/telephone-white.png" width="12px" alt="">
-                </div>
-                <p>
-    
-                </p>
-              </a>
-              <a href="">
-                <div class="img-box">
-                  <img src="images/envelope-white.png" width="18px" alt="">
-                </div>
-                <p>
-                  
-                </p>
-              </a>
-            </div>
-          </div>
-          
+   
 <!-- contact details -->
 
         </div>
@@ -706,17 +652,9 @@
     <!-- end info_section -->
 
 
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> 
-        </p>
-      </div>
-    </section>
-    <!-- footer section -->
+   
 
-  </div>
+
    
   <script>
 const images = ['images/fade.jpg', 'images/arbiverse2.png', 'images/arbivere.png'];
@@ -729,6 +667,11 @@ function changeBackground() {
 }
 
 setInterval(changeBackground, 6000);
+
+
+
+// footer
+
   </script>
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
