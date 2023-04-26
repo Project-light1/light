@@ -247,6 +247,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#service">Services</a>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://arbiverse.gitbook.io/white-paper/">white-paper</a>
+                </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="">Arbiversity</a>
                   <h6>comming soon</h6>
@@ -285,13 +289,19 @@
                         Contact Us
                       </a>
                     </div>
+                    <div class="contract-address-container" style="margin-bottom: 15px;">
+                    <label for="contract-address">Contract Address</label>
+                    <input type="text" class="form-control" id="contract-address" value="0xA5a9850CE7977F6810C6EE40dd105D7c30297B69" readonly>
+                    <button class="" type="button" style="background-color:#B68D40;" id="copy-button" onclick="copyAddress()">Copy</button>
+                  </div>
+
                   </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <div class="img-box">
                   <img src="images/img7.png" alt="">   
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -300,7 +310,7 @@
               <div class="row">
                <div class="col-md-6 m-div">
                   <div class="detail_box" style="margin-bottom:10px;">
-                   <h1 style=" font-family: 'Games', sans-serif; letter-spacing: 5px; font-size: 28; margin-top: 10px;" >
+                   <h1 style=" font-family: 'Games', sans-serif; letter-spacing: 5px; font-size: 28px; margin-top: 10px;" >
                          Introducing ArbiVerse
                     </h1>
                     <p style="font-size:20px;">
@@ -314,6 +324,11 @@
                       <a href="" class="btn-1">
                         Contact Us
                     </div>
+                    <div class="contract-address-container" style="margin-bottom: 15px;">
+                    <label for="contract-address">Contract Address</label>
+                    <input type="text" class="form-control" id="contract-address" value="0xA5a9850CE7977F6810C6EE40dd105D7c30297B69" readonly>
+                    <button class="" type="button" style="background-color:#B68D40;" id="copy-button" onclick="copyAddress()">Copy</button>
+                  </div>
                   </div>
                 </div>
                 
@@ -324,13 +339,14 @@
           </div>
         </div>
         <div class="carousel_btn-container">
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
-          </a>
+          </a> -->
           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="sr-only">Next</span>
           </a>
         </div>
+        
       </div>
 
     </section>
@@ -338,36 +354,75 @@
   </div>
 
   <!-- about section -->
-<div id="about"></div>
-  <section class="about_section " style="background-color:#c2c1a9;">
+ <div id="token"></div>
+  <section class="work_section layout_padding"  style="background-color:#c2c1a9;">
     <div class="container">
+      <div class="heading_container">
+        <h2>
+          TOKENOMICS
+        </h2>
+        <p>
+          <h3>Token name: ARBV</h3> </p>
+<p><h3>Token type: ERC-20</h3></p> 
+<p><h3>Total supply: 20,000,000 ARBV</h3></p>
+
+
+
+        </p>
+      </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.png" class="animated11">
+          <div class="detail_container">
+            <div class="box b-1">
+              <div class="top-box">
+                <div class="icon-box">
+                  <img src="images/work-i2.png" alt="">
+                </div>
+                <h5>
+                  Burning
+                </h5>
+              </div>
+              <div class="bottom-box">
+                <p>
+                 50% (10,000,000 ARBV) to be burned over the course of 3 years and 3 months. (5% burnt every 3 months)
+
+                </p>
+              </div>
+            </div>
+            <div class="box b-1">
+              <div class="top-box">
+                <div class="icon-box">
+                  <img src="images/work-i2.png" alt="">
+                </div>
+                <h5>
+                  IDO
+                </h5>
+              </div>
+              <div class="bottom-box">
+                <p>
+                  10% (2,000,000 ARBV) allocated for IDO sales, with a 1-month cliff and a vesting period over the span of 4 months.
+
+
+                  
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2 >
-                About Us
-              </h2>
-            </div >
-            <p >
-            Welcome to ArbiVerse, a mobile application that enables NFT creators, collectors, artists, and enthusiasts to access the NFT marketplace on the go. Our platform was created to provide a seamless experience for NFT lovers, allowing them to engage with the market in a way that fits their lifestyle.
-
-
-            </p>
-            <a href="https://arbiverse.gitbook.io/white-paper/">
-              Read More
-            </a>
+          <div class="img-box">
+            <img src="images/work-img.png" alt="">
           </div>
         </div>
       </div>
+
+      <div class="btn-box">
+        <a href="">
+          Read More
+        </a>
+      </div>
     </div>
   </section>
-
   <!-- end about section -->
 
 <div id="service"></div>
@@ -466,75 +521,39 @@
   <!-- end service section -->
 
   <!-- work section -->
-<div id="token"></div>
-  <section class="work_section layout_padding"  style="background-color:#c2c1a9;">
+
+<div id="about"></div>
+  <section class="about_section " style="background-color:#c2c1a9;">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          TOKENOMICS
-        </h2>
-        <p>
-          <h3>Token name: ARBV</h3> </p>
-<p><h3>Token type: ERC-20</h3></p> 
-<p><h3>Total supply: 20,000,000 ARBV</h3></p>
-
-
-
-        </p>
-      </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="detail_container">
-            <div class="box b-1">
-              <div class="top-box">
-                <div class="icon-box">
-                  <img src="images/work-i2.png" alt="">
-                </div>
-                <h5>
-                  Burning
-                </h5>
-              </div>
-              <div class="bottom-box">
-                <p>
-                 50% (10,000,000 ARBV) to be burned over the course of 3 years and 3 months. (5% burnt every 3 months)
-
-                </p>
-              </div>
-            </div>
-            <div class="box b-1">
-              <div class="top-box">
-                <div class="icon-box">
-                  <img src="images/work-i2.png" alt="">
-                </div>
-                <h5>
-                  IDO
-                </h5>
-              </div>
-              <div class="bottom-box">
-                <p>
-                  10% (2,000,000 ARBV) allocated for IDO sales, with a 1-month cliff and a vesting period over the span of 4 months.
-
-
-                  
-                </p>
-              </div>
-            </div>
+          <div class="img-box">
+            <img src="images/about-img.png" class="animated11">
           </div>
         </div>
         <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/work-img.png" alt="">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2 >
+                About Us
+              </h2>
+            </div >
+            <p >
+            Welcome to ArbiVerse, a mobile application that enables NFT creators, collectors, artists, and enthusiasts to access the NFT marketplace on the go. Our platform was created to provide a seamless experience for NFT lovers, allowing them to engage with the market in a way that fits their lifestyle.
+
+
+            </p>
+            <a href="https://arbiverse.gitbook.io/white-paper/">
+              Read More
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
       </div>
     </div>
   </section>
+
+
+
   <!-- end work section -->
 
   <!-- team section -->
@@ -667,6 +686,14 @@ function changeBackground() {
 }
 
 setInterval(changeBackground, 6000);
+
+function copyAddress() {
+  const addressInput = document.getElementById("contract-address");
+  addressInput.select();
+  addressInput.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+  alert("Contract address copied: " + addressInput.value);
+}
 
 
 
